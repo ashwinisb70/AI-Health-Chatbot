@@ -1,0 +1,172 @@
+/* =========================
+   GLOBAL THEME
+========================= */
+
+.stApp {
+    background: linear-gradient(to right, #eef8ff, #ffffff);
+    font-family: Arial;
+    color: #111;
+}
+
+/* =========================
+   STREAMLIT TEXT FIX
+========================= */
+
+.stApp * {
+    font-family: Arial;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.main-title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #0b74a5 !important;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #555 !important;
+}
+
+/* =========================
+   DOCTOR CARD
+========================= */
+
+.doctor-card {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.doctor-card img {
+    width: 180px;
+    border-radius: 50%;
+    border: 4px solid #0b74a5;
+}
+
+/* =========================
+   INFO BOX (NAME / AGE / GENDER FIX)
+========================= */
+
+.info-box {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-top: 10px;
+}
+
+/* Labels */
+label {
+    color: #111 !important;
+    font-weight: 600;
+}
+
+/* =========================
+   INPUT FIELDS FIX (IMPORTANT)
+========================= */
+
+/* Text input */
+input {
+    background-color: white !important;
+    color: #111 !important;
+}
+
+/* Streamlit input containers */
+div[data-baseweb="input"] input {
+    background-color: white !important;
+    color: #111 !important;
+}
+
+/* Number input */
+div[data-baseweb="input"] {
+    background-color: white !important;
+}
+
+/* Select box */
+div[data-baseweb="select"] {
+    background-color: white !important;
+    color: #111 !important;
+}
+
+/* Textarea */
+textarea {
+    background-color: white !important;
+    color: #111 !important;
+    border-radius: 10px !important;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+div.stButton > button {
+    width: 100%;
+    height: 50px;
+    background: #0b74a5;
+    color: white !important;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+}
+
+div.stButton > button:hover {
+    background: #085d86;
+}
+
+/* =========================
+   CHAT UI FIX
+========================= */
+
+[data-testid="stChatMessage"] {
+    padding: 12px;
+    border-radius: 18px;
+    margin: 10px 0;
+    background: #ffffff !important;
+    color: #111 !important;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+/* USER CHAT */
+[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatar"][title="user"]) {
+    background: #d9f2ff !important;
+    border-left: 5px solid #0b74a5;
+}
+
+/* ASSISTANT CHAT */
+[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatar"][title="assistant"]) {
+    background: #f2f2f2 !important;
+    border-left: 5px solid #888;
+}
+
+/* FORCE TEXT VISIBILITY */
+[data-testid="stChatMessage"] * {
+    color: #111 !important;
+}
+
+/* =========================
+   METRICS
+========================= */
+
+[data-testid="stMetric"] {
+    background: white;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+    color: #666 !important;
+    margin-top: 40px;
+}
