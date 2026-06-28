@@ -15,8 +15,8 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-training = pd.read_csv(os.path.join(BASE_DIR, "Training.csv"))
-testing = pd.read_csv(os.path.join(BASE_DIR, "Testing.csv"))
+training = pd.read_csv(os.path.join(BASE_DIR, "Data", "Training.csv"))
+testing = pd.read_csv(os.path.join(BASE_DIR, "Data", "Testing.csv"))
 
 
 training.columns = training.columns.str.replace(r"\.\d+$", "", regex=True)
