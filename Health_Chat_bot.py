@@ -3,6 +3,7 @@ import random
 import pandas as pd
 import numpy as np
 import csv
+import os
 from sklearn import preprocessing
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
@@ -10,15 +11,11 @@ from difflib import get_close_matches
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-import os
 
 BASE_DIR = os.path.dirname(__file__)
 
-training_path = os.path.join(BASE_DIR, "Training.csv")
-testing_path = os.path.join(BASE_DIR, "Testing.csv")
-
-training = pd.read_csv(training_path)
-testing = pd.read_csv(testing_path)
+training = pd.read_csv(os.path.join(BASE_DIR, "Training.csv"))
+testing = pd.read_csv(os.path.join(BASE_DIR, "Testing.csv"))
 
 
 training.columns = training.columns.str.replace(r"\.\d+$", "", regex=True)
