@@ -1,3 +1,4 @@
+import os
 import re
 import random
 import pandas as pd
@@ -12,7 +13,7 @@ import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 
-BASE_DIR = os.path.dirname(__file__)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 training = pd.read_csv(os.path.join(BASE_DIR, "Training.csv"))
 testing = pd.read_csv(os.path.join(BASE_DIR, "Testing.csv"))
@@ -51,15 +52,18 @@ def getDescription():
     return description_list
 
 def getSeverityDict():
-    with open('MasterData/symptom_severity.csv') as csv_file:
+    file_path = os.path.join(BASE_DIR, "MasterData", "symptom_severity.csv")
+
+    with open(file_path) as csv_file:
         for row in csv.reader(csv_file):
             try:
                 severityDictionary[row[0]] = int(row[1])
             except:
                 pass
-
 def getprecautionDict():
-    with open('MasterData/symptom_precaution.csv') as csv_file:
+    file_path = os.path.join(BASE_DIR, "MasterData", "symptom_precaution.csv")
+
+    with open(file_path) as csv_file:
         for row in csv.reader(csv_file):
             precautionDictionary[row[0]] = [row[1], row[2], row[3], row[4]]
 
