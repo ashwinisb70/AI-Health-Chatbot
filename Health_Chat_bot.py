@@ -46,9 +46,17 @@ description_list = {}
 precautionDictionary = {}
 symptoms_dict = {symptom: idx for idx, symptom in enumerate(x)}
 
+description_list = {}
+
 def getDescription():
     global description_list
-    description_list = {...}
+
+    description_list = {
+        # example format (yours will have many diseases)
+        "Fungal infection": "A fungal infection is caused by fungus...",
+        "Allergy": "An allergy is an immune system reaction...",
+    }
+
     return description_list
 
 def getSeverityDict():

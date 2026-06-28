@@ -136,7 +136,9 @@ if predict:
         </div>
         """, unsafe_allow_html=True)
 
-        st.info(description_list.get(prediction[0], "No description available"))
+        desc = description_list or {}
+        st.info(desc.get(prediction[0], "No description available"))
+        
         precautions = precautionDictionary.get(prediction[0], [])
 
 st.markdown(f"""
